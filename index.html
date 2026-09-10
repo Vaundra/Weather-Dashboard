@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+   * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #74ebd5, #9face6);
+}
+
+.container {
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+}
+
+h1 {
+    color: white;
+    margin-bottom: 25px;
+    font-size: 40px;
+}
+
+.search-box {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.search-box input {
+    flex: 1;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    outline: none;
+}
+
+.search-box button {
+    padding: 14px 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: #68939f;
+    background: #92a0d9;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.search-box button:hover {
+    background-color: #4dc6b8;
+}
+
+.weather-card {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.weather-card h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+#temperature {
+    font-size: 55px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#condition {
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    font-size: 17px;
+}
+
+.details p {
+    background: #92a0d9;
+    padding: 12px;
+    border-radius: 10px;
+}
+
+@media (max-width: 500px) {
+    .search-box {
+        flex-direction: column;
+    }
+
+    .search-box button {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 27px;
+    }
+}
+</style>
+<body>
+    <div class="container">
+
+        <h1>🌦️ Weather Dashboard</h1>
+
+        <div class="search-box">
+            <input 
+                type="text" 
+                id="cityInput" 
+                placeholder="Enter city name"
+            >
+
+            <button id="searchBtn">Search</button>
+        </div>
+
+        <div class="weather-card">
+
+            <h2 id="cityName">City Name</h2>
+
+            <p id="temperature">--°C</p>
+
+            <p id="condition">Weather Condition</p>
+
+            <div class="details">
+
+                <p>💧 Humidity: <span id="humidity">--</span>%</p>
+
+                <p>💨 Wind: <span id="wind">--</span> km/h</p>
+
+                <p>🌡️ Feels Like: <span id="feelsLike">--</span>°C</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="Script.js"></script>
+
+</body>
+</html>
+
